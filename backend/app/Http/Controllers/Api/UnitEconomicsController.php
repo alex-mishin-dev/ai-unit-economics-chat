@@ -200,7 +200,7 @@ class UnitEconomicsController extends Controller
                 ->timeout(self::DEEPSEEK_TIMEOUT)
                 ->connectTimeout(10)
                 ->post($apiUrl, [
-                    "model" => "deepseek-chat",
+                    "model" => "deepseek/deepseek-r1:free",
                     "messages" => [
                         [
                             "role" => "system",
@@ -217,6 +217,16 @@ class UnitEconomicsController extends Controller
                     "frequency_penalty" => 0.1,
                     "presence_penalty" => 0.1,
                     "stream" => false,
+
+                    // Добавляем дополнительные заголовки для OpenRouter:
+                    "HTTP-Referer" => env(
+                        "OPENROUTER_SITE_URL",
+                        "http://localhost:3000",
+                    ),
+                    "X-Title" => env(
+                        "OPENROUTER_APP_NAME",
+                        "AI Unit Economics Chat",
+                    ),
                 ]);
 
             if (!$response->successful()) {
