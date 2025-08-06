@@ -1,30 +1,56 @@
-/vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
+# Laravel
+backend/vendor/
+backend/node_modules/
+backend/public/hot
+backend/public/storage
+backend/storage/*.key
+backend/.env
+backend/.env.backup
+backend/.phpunit.result.cache
+backend/bootstrap/cache/
+backend/storage/framework/cache/
+backend/storage/framework/sessions/
+backend/storage/framework/views/
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# Vue.js
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
+# PostgreSQL
+*.sql
+*.dump
+*.backup
 
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
+# Ubuntu/Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
 
-storage/*.key
-.env
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
+# Zed Editor
+.zed/local_settings.json
+.zed/local_tasks.json
 
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
+# IDE и система
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Логи и кеши
+*.log
+.cache/
+.npm/
+.composer/
+
+# Environment файлы
+.env.*
+!.env.example
