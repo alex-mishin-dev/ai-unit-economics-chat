@@ -55,3 +55,11 @@ Route::prefix("v1")->group(function () {
         ]);
     });
 });
+
+Route::get('/status', function() {
+    return response()->json([
+        'uptime' => 'OK',
+        'memory_usage' => memory_get_usage(true),
+        'peak_memory' => memory_get_peak_usage(true)
+    ]);
+});
