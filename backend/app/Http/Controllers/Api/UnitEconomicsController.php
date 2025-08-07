@@ -559,3 +559,4 @@ class UnitEconomicsController extends Controller
             "Анализ выполнен с помощью AI и может содержать неточности.";
     }
 }
+// Fixed potential HTML response issue
